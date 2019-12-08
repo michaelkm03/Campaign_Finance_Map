@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "features": [
+    {
+      "type": "Candidate",
+      "properties": {
+        "ID": 960,
+        "AMOUNT": 28014,
+        "NAME": "DONALD TRUMP"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-118.445, 34.045]
+      }
+    }
+  ]
+}

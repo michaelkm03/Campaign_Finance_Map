@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
-import * as parkDate from "./data/skateboard-parks.json";
+import * as parkDate from "./data/test_data.json";
 
 export default function App() {
   const [viewport, setViewport] = useState({
-    latitude: 45.4211,
-    longitude: -75.6903,
+    latitude: 38.515778,
+    longitude: -98.228015,
     width: "100vw",
     height: "100vh",
-    zoom: 10
+    zoom: 4
   });
   const [selectedPark, setSelectedPark] = useState(null);
 
@@ -30,7 +30,7 @@ export default function App() {
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-        mapStyle="mapbox://styles/michael-montgomery/ck3rknb964b4i1cnuhvdbxabv"
+        mapStyle="mapbox://styles/michael-montgomery/ck3v138np0xs51cpli4jrzav9"
         onViewportChange={viewport => {
           setViewport(viewport);
         }}
@@ -63,7 +63,7 @@ export default function App() {
           >
             <div>
               <h2>{selectedPark.properties.NAME}</h2>
-              <p>{selectedPark.properties.DESCRIPTIO}</p>
+              <p>{selectedPark.properties.AMOUNT}</p>
             </div>
           </Popup>
         ) : null}
